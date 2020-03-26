@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>{{title}}</title>
+    <meta charset="utf-8">
+    <!--double bracket {{}} represent variable names, rendered at runtime-->
+    <meta name="description" content={{description}}>
+    <link rel="shortcut icon" href="/favicon.ico">
+    {% block css %}{% endblock %}
+  </head>
+
+  <body>
+      <!--include is used for partials-->
+    {% include 'navigation.html' %}
+    {% block content %}{% endblock %}
+  </body>
+
+</html>

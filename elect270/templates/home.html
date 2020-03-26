@@ -1,0 +1,18 @@
+<!--in jinja extending an html doc means including
+entire thing in code-->
+{% extends 'layout.html' %}
+
+<!--this block goes in corresponding block in layout
+this is how html knows where to mount our home.html block
+content is the name of the block, can have multiple-->
+{% block content %}
+    <div class="container">
+        <h1>{{title}}</h1>
+        <p>{{description}}</p>
+    </div>
+{% endblock %}
+
+
+{% block css %}
+  <link href="{{ url_for('static', filename='css/home.css') }}" rel="stylesheet">
+{% endblock %}
